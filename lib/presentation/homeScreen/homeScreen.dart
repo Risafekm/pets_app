@@ -27,10 +27,11 @@ class HomeScreen extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(top: 15.0),
       child: Center(
-          child: Text(
-        'Pets',
-        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-      )),
+        child: Text(
+          'Pets',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }
