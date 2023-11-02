@@ -20,10 +20,10 @@ BoxDecoration containerDeroration() {
 }
 
 /// appbar widget
-AppBar appBar() {
+AppBar appBar({required VoidCallback onTap}) {
   return AppBar(
       backgroundColor: Colors.lightGreen.shade400,
-      leading: const IconWidget(),
+      leading: IconWidget(onTap: onTap),
       title: Padding(
         padding: const EdgeInsets.only(left: 60),
         child: SizedBox(

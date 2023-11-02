@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:pets_app/domain/models/pet_model.dart';
+import 'package:pets_app/domain/models/homeScreen/pet_model.dart';
 import 'package:pets_app/presentation/homeScreen/widgets/widgets_home.dart';
 import 'package:pets_app/presentation/searchListviewScreen/search_list_screen.dart';
 
@@ -27,7 +27,7 @@ class CardGridView extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => SearchListScreen(
-                          model: datamodel,
+                          dataModel: datamodel,
                         )));
               },
               child: Container(
@@ -40,8 +40,8 @@ class CardGridView extends StatelessWidget {
                     Container(
                       height: 105,
                       width: 105,
-                      decoration: circleAvatarDecoration(index,
-                          image: petModel[index].image),
+                      decoration:
+                          circleAvatarDecoration(index, image: datamodel.image),
                     ),
                     const SizedBox(height: 10),
                     Center(

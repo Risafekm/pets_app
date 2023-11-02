@@ -1,11 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 
 class IconWidget extends StatelessWidget {
-  const IconWidget({
-    super.key,
-  });
+  VoidCallback onTap;
+  IconWidget({
+    Key? key,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +27,10 @@ class IconWidget extends StatelessWidget {
                 spreadRadius: 1,
                 blurRadius: 10),
           ]),
-      child:
-          const Center(child: Icon(Icons.arrow_back_ios, color: Colors.green)),
+      child: Center(
+          child: GestureDetector(
+              onTap: onTap,
+              child: const Icon(Icons.arrow_back_ios, color: Colors.green))),
     );
   }
 }
