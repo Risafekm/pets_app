@@ -1,6 +1,9 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:pets_app/domain/models/pet_model.dart';
 import 'package:pets_app/presentation/homeScreen/widgets/widgets_home.dart';
+import 'package:pets_app/presentation/searchListviewScreen/search_list_screen.dart';
 
 class CardGridView extends StatelessWidget {
   const CardGridView({
@@ -16,29 +19,39 @@ class CardGridView extends StatelessWidget {
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
+          final datamodel = petModel[index];
+
           return Padding(
             padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-            child: Container(
-              height: 150,
-              width: 150,
-              padding: const EdgeInsets.all(25),
-              decoration: containerDeroration(),
-              child: Column(
-                children: [
-                  Container(
-                    height: 105,
-                    width: 105,
-                    decoration: circleAvatarDecoration(index,
-                        image: petModel[index].image),
-                  ),
-                  const SizedBox(height: 10),
-                  Center(
-                    child: Text(
-                      petModel[index].name,
-                      style: const TextStyle(fontWeight: FontWeight.w500),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SearchListScreen(
+                          model: datamodel,
+                        )));
+              },
+              child: Container(
+                height: 150,
+                width: 150,
+                padding: const EdgeInsets.all(25),
+                decoration: containerDeroration(),
+                child: Column(
+                  children: [
+                    Container(
+                      height: 105,
+                      width: 105,
+                      decoration: circleAvatarDecoration(index,
+                          image: petModel[index].image),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 10),
+                    Center(
+                      child: Text(
+                        datamodel.name,
+                        style: const TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           );
