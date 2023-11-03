@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pets_app/domain/models/searchListviewScreen/search_model.dart';
+import 'package:pets_app/presentation/detailsScreen/details_screen.dart';
 import 'package:pets_app/presentation/searchListviewScreen/widgets/widgets_search.dart';
 
 class ListviewWidget extends StatelessWidget {
@@ -9,15 +10,18 @@ class ListviewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 570,
-      child: ListView.builder(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          itemCount: cageModel.length,
-          itemBuilder: (context, index) {
-            final SearchModel cage = cageModel[index];
-            return Padding(
+    return ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: cageModel.length,
+        itemBuilder: (context, index) {
+          final SearchModel cage = cageModel[index];
+          return GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => DetailsScreen(datamodel: cage)));
+            },
+            child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Stack(
                 children: [
@@ -102,8 +106,8 @@ class ListviewWidget extends StatelessWidget {
                   ),
                 ],
               ),
-            );
-          }),
-    );
+            ),
+          );
+        });
   }
 }
