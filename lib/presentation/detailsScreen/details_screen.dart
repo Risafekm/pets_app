@@ -2,8 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:pets_app/domain/models/searchListviewScreen/search_model.dart';
 import 'package:pets_app/domain/reuseablewidget/appbar.dart';
+import 'package:pets_app/presentation/detailsScreen/widgets/button_chat.dart';
+import 'package:pets_app/presentation/detailsScreen/widgets/delivery_part.dart';
 import 'package:pets_app/presentation/detailsScreen/widgets/imageview_details.dart';
-import 'package:pets_app/presentation/detailsScreen/widgets/widgets_details.dart';
+import 'package:pets_app/presentation/detailsScreen/widgets/part_three_column.dart';
+import 'package:pets_app/presentation/detailsScreen/widgets/part_two_column.dart';
 
 class DetailsScreen extends StatelessWidget {
   SearchModel datamodel;
@@ -15,29 +18,28 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBar(onTap: () => Navigator.pop(context)),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              DetailsImageView(datamodel: datamodel),
-              const SizedBox(height: 20),
-
-              //price text
-
-              priceText(datamodel: datamodel),
-              const SizedBox(height: 10),
-
-              //title text
-              titleText(datamodel: datamodel),
-
-              const SizedBox(height: 15),
-
-              //location icon ,text and Date
-
-              locationDate(datamodel: datamodel),
-            ],
-          ),
-        ));
+      appBar: appBar(onTap: () => Navigator.pop(context)),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //imagePageView
+            DetailsImageView(datamodel: datamodel),
+            const SizedBox(height: 20),
+            // part two Column
+            PartTwoColumn(datamodel: datamodel),
+            const SizedBox(height: 15),
+            // part three Column
+            PartThreeColumn(datamodel: datamodel),
+            // Delivery part
+            const DeliveryPart(),
+            const SizedBox(height: 15),
+            //ButtonPart
+            const ButtonChat(),
+            const SizedBox(height: 15),
+          ],
+        ),
+      ),
+    );
   }
 }

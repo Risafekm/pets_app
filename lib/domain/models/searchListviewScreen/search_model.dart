@@ -28,7 +28,7 @@ List<SearchModel> cageModel = [
       location: 'Ernakulam',
       price: "₹2200",
       date: 'July 31',
-      size: '180'),
+      size: '180cm'),
   SearchModel(
       title: 'amazon basics Two Door Top Load Pet Carrier',
       image:
