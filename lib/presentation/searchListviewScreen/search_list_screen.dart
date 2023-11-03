@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:pets_app/domain/models/homeScreen/pet_model.dart';
 import 'package:pets_app/domain/models/searchListviewScreen/search_model.dart';
-import 'package:pets_app/presentation/homeScreen/widgets/widgets_home.dart';
+import 'package:pets_app/domain/reuseablewidget/appbar.dart';
 import 'package:pets_app/presentation/searchListviewScreen/widgets/listview_widget.dart';
 import 'package:pets_app/presentation/searchListviewScreen/widgets/widgets_search.dart';
 

@@ -5,6 +5,7 @@ class SearchModel {
   String price;
   String location;
   String date;
+  String size;
 
   SearchModel({
     required this.title,
@@ -13,6 +14,7 @@ class SearchModel {
     required this.location,
     required this.price,
     required this.date,
+    required this.size,
   });
 }
 
@@ -25,7 +27,8 @@ List<SearchModel> cageModel = [
           'The Pet Vogue Carrier is perfect for both Cats and Dogs. Portable kennel has a durable construction & door latches for security. The pet carrier meets most airline cargo specifications for easy sky travel & has a carrying handle for transport.',
       location: 'Ernakulam',
       price: "₹2200",
-      date: 'July 31'),
+      date: 'July 31',
+      size: '180'),
   SearchModel(
       title: 'amazon basics Two Door Top Load Pet Carrier',
       image:
@@ -34,7 +37,8 @@ List<SearchModel> cageModel = [
           'Two-door, top-load model allows for easy loading of your cat or dog',
       location: 'delhi',
       price: "₹3000",
-      date: 'March 12'),
+      date: 'March 12',
+      size: '220cm'),
   SearchModel(
       title: 'Cat Cage',
       image:
@@ -43,7 +47,8 @@ List<SearchModel> cageModel = [
           'Metal Construction : The crate features durable metal-wire construction for strength and optimal ventilation and visibility. Rounded corners help protect pets',
       location: 'goa',
       price: "₹2500",
-      date: 'March 18'),
+      date: 'March 18',
+      size: '160cm'),
   SearchModel(
     title: 'Cat Cage',
     image: 'https://m.media-amazon.com/images/I/51-8nPmxvjL.jpg',
@@ -52,6 +57,7 @@ List<SearchModel> cageModel = [
     location: 'aluva',
     price: "₹1000",
     date: 'June 2',
+    size: '150cm',
   ),
   SearchModel(
       title: 'Midwest Foldable Metal Pet Dog Exercise Fence Pen with Gate',
@@ -60,5 +66,6 @@ List<SearchModel> cageModel = [
           'Indoor/outdoor portable 24-inch play and exercise pen with door; for dogs up to 16 inches tall.Suitable For Dachshund,Chihuahua,Shih Tzu,Pomeranian,Pug,Beagle,Bulldog,English Cocker Spaniel, Lhasa Apso.',
       location: 'Aluva',
       price: "₹600",
-      date: 'april 7'),
+      date: 'april 7',
+      size: '200cm'),
 ];
