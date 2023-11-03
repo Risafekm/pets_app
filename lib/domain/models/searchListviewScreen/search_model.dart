@@ -4,13 +4,16 @@ class SearchModel {
   String description;
   String price;
   String location;
+  String date;
 
-  SearchModel(
-      {required this.title,
-      required this.image,
-      required this.description,
-      required this.location,
-      required this.price});
+  SearchModel({
+    required this.title,
+    required this.image,
+    required this.description,
+    required this.location,
+    required this.price,
+    required this.date,
+  });
 }
 
 List<SearchModel> cageModel = [
@@ -21,7 +24,8 @@ List<SearchModel> cageModel = [
       description:
           'The Pet Vogue Carrier is perfect for both Cats and Dogs. Portable kennel has a durable construction & door latches for security. The pet carrier meets most airline cargo specifications for easy sky travel & has a carrying handle for transport.',
       location: 'Ernakulam',
-      price: "₹2200"),
+      price: "₹2200",
+      date: 'July 31'),
   SearchModel(
       title: 'amazon basics Two Door Top Load Pet Carrier',
       image:
@@ -29,7 +33,8 @@ List<SearchModel> cageModel = [
       description:
           'Two-door, top-load model allows for easy loading of your cat or dog',
       location: 'delhi',
-      price: "₹3000"),
+      price: "₹3000",
+      date: 'March 12'),
   SearchModel(
       title: 'Cat Cage',
       image:
@@ -37,7 +42,8 @@ List<SearchModel> cageModel = [
       description:
           'Metal Construction : The crate features durable metal-wire construction for strength and optimal ventilation and visibility. Rounded corners help protect pets',
       location: 'goa',
-      price: "₹2500"),
+      price: "₹2500",
+      date: 'March 18'),
   SearchModel(
     title: 'Cat Cage',
     image: 'https://m.media-amazon.com/images/I/51-8nPmxvjL.jpg',
@@ -45,6 +51,7 @@ List<SearchModel> cageModel = [
         'Metal Construction : The crate features durable metal-wire construction for strength and optimal ventilation and visibility. Rounded corners help protect pets',
     location: 'aluva',
     price: "₹1000",
+    date: 'June 2',
   ),
   SearchModel(
       title: 'Midwest Foldable Metal Pet Dog Exercise Fence Pen with Gate',
@@ -52,5 +59,6 @@ List<SearchModel> cageModel = [
       description:
           'Indoor/outdoor portable 24-inch play and exercise pen with door; for dogs up to 16 inches tall.Suitable For Dachshund,Chihuahua,Shih Tzu,Pomeranian,Pug,Beagle,Bulldog,English Cocker Spaniel, Lhasa Apso.',
       location: 'Aluva',
-      price: "₹600"),
+      price: "₹600",
+      date: 'april 7'),
 ];

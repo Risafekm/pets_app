@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:pets_app/domain/models/searchListviewScreen/search_model.dart';
 import 'package:pets_app/presentation/detailsScreen/widgets/imageview_details.dart';
+import 'package:pets_app/presentation/detailsScreen/widgets/widgets_details.dart';
 import 'package:pets_app/presentation/homeScreen/widgets/widgets_home.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -17,8 +18,23 @@ class DetailsScreen extends StatelessWidget {
         appBar: appBar(onTap: () => Navigator.pop(context)),
         body: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DetailsImageView(datamodel: datamodel),
+              const SizedBox(height: 20),
+
+              //price text
+
+              priceText(datamodel: datamodel),
+              const SizedBox(height: 10),
+
+              //title text
+              titleText(datamodel: datamodel),
+
+              const SizedBox(height: 15),
+
+              //location icon ,text and Date
+              locationDate(datamodel: datamodel),
             ],
           ),
         ));

@@ -59,6 +59,7 @@ class ListviewWidget extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // Title text
                           Text(
                             cage.title,
                             maxLines: 1,
@@ -68,12 +69,17 @@ class ListviewWidget extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis),
                           ),
                           const SizedBox(height: 5),
+                          //price text
+
                           Text(
                             cage.price,
                             style: const TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(height: 5),
+
+                          //description text
+
                           Text(
                             cage.description,
                             maxLines: 2,
@@ -83,6 +89,8 @@ class ListviewWidget extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis),
                           ),
                           const SizedBox(height: 5),
+                          // location icon and location text
+
                           Row(
                             children: [
                               const Icon(
