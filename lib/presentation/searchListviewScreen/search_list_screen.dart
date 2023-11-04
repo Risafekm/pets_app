@@ -18,7 +18,9 @@ class SearchListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: appBar(onTap: () => Navigator.pop(context)),
+        appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(60.0),
+            child: MyAppBar(onTap: () => Navigator.pop(context))),
         body: SingleChildScrollView(
           child: Column(
             children: [

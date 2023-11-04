@@ -18,7 +18,9 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(onTap: () => Navigator.pop(context)),
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(60.0),
+          child: MyAppBar(onTap: () => Navigator.pop(context))),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

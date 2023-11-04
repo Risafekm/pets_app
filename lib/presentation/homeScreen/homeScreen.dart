@@ -11,7 +11,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: appBar(onTap: () {}),
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(60.0),
+          child: MyAppBar(onTap: () {})),
       body: Column(
         children: [
           cardTitle(),
